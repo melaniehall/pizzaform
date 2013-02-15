@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>Pizza</title>
+    <link href="style.css" rel="stylesheet">
+ <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    
+    $('#prepBtn').click(function(){
+
+        $('#showOrder').html("<h3>This pizza will have:</h3>" + $('input:radio:checked').val() + " Crust <br/>")
+        
+        $('input:checkbox:checked').each(function(){
+        $('#showOrder').append($(this).val() + "<br/>")
+        });
+    });
+        
+
+    }); //end ready
+
+        
+
+    
+    </script>
+</head>
+<body>
+<form id="pizzaform" action="#">
+<table>
+<tr><td class="tdHead">Toppings</td><td class="tdHead">Crust</td></tr>
+<tr>
+<td><input type="checkbox" id="topping1" value="Sausage" 
+name="toppingcheck">Sausage</td>
+<td><input type="radio" name="crust" value="Regular" 
+checked="checked" id="radio1">Regular</td>
+</tr>
+<tr>
+<td><input type="checkbox" id="topping2" value="Pepperoni" 
+name="toppingcheck">Pepperoni</td>
+<td><input type="radio" name="crust" value="Deep Dish" 
+id="radio2" />Deep Dish</td>
+</tr>
+<tr>
+<td><input type="checkbox" id="topping3" value="Ham" 
+name="toppingcheck">Ham</td>
+<td><input type="radio" name="crust" value="Thin" id="radio3">Thin</td>
+</tr>
+<tr>
+<td><input type="checkbox" id="topping4" value="Green Peppers" 
+name="toppingcheck">Green Peppers</td>
+<td></td>
+</tr>
+<tr>
+<td><input type="checkbox" id="topping5" value="Mushrooms" 
+name="toppingcheck">Mushrooms</td>
+<td></td>
+</tr>
+<tr>
+<td><input type="checkbox" id="topping6" value="Onions" 
+name="toppingcheck">Onions</td>
+<td></td>
+</tr>
+<tr>
+<td><input type="checkbox" id="topping7" value="Pineapple" 
+name="toppingcheck">Pineapple</td>
+<td></td>
+</tr>
+</table>
+
+<p><input type="button" id="prepBtn" name="prepBtn" value="Prep Pizza"></p>
+</form>
+<div id="showOrder">
+    
+</div>
+</body>
+</html>

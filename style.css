@@ -1,0 +1,29 @@
+body{
+	margin: 100px auto 0px;
+	width: 30%;
+
+}
+
+h3{
+	color: red;
+	line-height: .25em;
+}
+
+form{
+ border: 8px solid red;
+ width: 350px;
+ padding: 20px;
+}
+
+input{
+	margin-right: 6px;
+}
+
+.tdHead{
+	font-weight: bold;
+	font-size: 18px;
+}
+
+td{
+	padding-right: 60px;
+}
